@@ -1,0 +1,28 @@
+return {
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        -- Add the languages you want here!
+        ensure_installed = { 
+          'c', 'lua', 'vim', 'vimdoc', 'query', 'markdown', 'markdown_inline',
+          'python', 'zig', 'java', 'javascript', 'typescript', 'bash', 'html' 
+        },
+
+        -- Install parsers synchronously (only applied to `ensure_installed`)
+        sync_install = false,
+
+        -- Automatically install missing parsers when you open a new filetype
+        auto_install = true,
+
+        highlight = {
+          enable = true, -- This is the most important part!
+        },
+        indent = {
+          enable = true,
+        },
+      })
+    end,
+  },
+}

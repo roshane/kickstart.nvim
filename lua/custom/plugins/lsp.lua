@@ -7,7 +7,7 @@ return {
         clangd = {},
         zls = {},
         jdtls = {},
-        biome = {},
+        tsgo = {},
         pyright = {},
       }
       local ensure_installed = vim.tbl_keys(servers or {})
